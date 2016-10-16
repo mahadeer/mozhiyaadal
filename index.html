@@ -10,22 +10,51 @@
     <link rel="stylesheet" href="library/skeleton/normalize.css">
     <link rel="stylesheet" href="library/skeleton/skeleton.css">
     <!--<link rel="icon" type="image/png" href="assets/images/favicon.png">-->
-    <!-- Scripts Required -->
-    <script type="text/javascript" src="library/jquery.min.js"></script>
-    <script type="text/javascript" src="library/angular-min.js"></script>
     <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/custom.css">
-    <!-- Angular scripts -->
-    <script type="text/javascript" src="app/app.js"></script>
 </head>
 <body>
-<div class="container" ng-controller="ac_home">
+<header>
+    <div class="cd-logo"><a href="#0"><img src="img/cd-logo.svg" alt="Logo"></a></div>
+    <nav class="cd-main-nav-wrapper">
+        <ul class="cd-main-nav">
+            <li><a href="#0">About</a></li>
+            <li><a href="#0">Projects</a></li>
+            <li>
+                <a href="#0" class="cd-subnav-trigger"><span>Categories</span></a>
+
+                <ul>
+                    <li class="go-back"><a href="#0">Menu</a></li>
+                    <li><a href="#0">Category 1</a></li>
+                    <li><a href="#0">Category 2</a></li>
+                    <li><a href="#0">Category 3</a></li>
+                    <li><a href="#0">Category 4</a></li>
+                    <li><a href="#0">Category 5</a></li>
+                    <li><a href="#0" class="placeholder">Placeholder</a></li>
+                </ul>
+            </li>
+            <li><a href="#0">Blog</a></li>
+            <li><a href="#0">Contact</a></li>
+        </ul> <!-- .cd-main-nav -->
+    </nav> <!-- .cd-main-nav-wrapper -->
+
+    <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+</header>
+<main class="container" ng-controller="ac_home">
     <div class="row">
         <div class="one-half column" style="margin-top: 25%">
             <h4>{{Content}}</h4>
             <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
         </div>
     </div>
-</div>
+</main>
+<!-- Scripts Required -->
+<script type="text/javascript" src="library/jquery.min.js"></script>
+<script type="text/javascript" src="library/angular-min.js"></script>
+<!-- Custom scripts -->
+<script type="text/javascript" src="scripts/nav.js"></script>
+<!-- Angular scripts -->
+<script type="text/javascript" src="app/app.js"></script>
 </body>
 </html>
