@@ -18,3 +18,11 @@ a {
     color: #7e4d7e;
     text-decoration: none;
 }
+
+li.site-main-nav-search a{
+ margin-left: -25px;
+}
+
+li.site-main-nav-login a {
+    margin-left: -15px;
+}

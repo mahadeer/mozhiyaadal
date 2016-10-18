@@ -13,7 +13,7 @@ header li {
 header {
     position: fixed;
     z-index: 3;
-    height: 50px;
+    height: 60px;
     width: 100%;
     top: 0;
     left: 0;
@@ -44,7 +44,7 @@ header::before {
     display: none;
     content: 'mobile';
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (max-width: 1024px) {
     header {
         height: 80px;
     }
@@ -471,6 +471,7 @@ header::before {
     -o-transform: translateX(-260px);
     transform: translateX(-260px);
 }
+
 @media only screen and (min-width: 1024px) {
     .cd-main-content {
         padding-top: 80px;
