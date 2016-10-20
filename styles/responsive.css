@@ -1,0 +1,35 @@
+/* CSS BREAKPOINTS
+Mobile < 564px,
+564px > Tablet < 992px
+Desktop > 992px
+*/
+
+.rsx-hide {
+    display: block;
+}
+
+.rsx-mobile-hide {
+    display: block;
+}
+
+.rsx-tablet-hide {
+    display: block;
+}
+
+@media only screen and (max-width: 992px) {
+    .rsx-hide {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 564px) {
+    .rsx-mobile-hide {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 564px) and (max-width: 992px) {
+    .rsx-tablet-hide {
+        display: none;
+    }
+}

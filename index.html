@@ -13,54 +13,25 @@
     <link rel="stylesheet" href="library/skeleton/skeleton.css">
     <!--<link rel="icon" type="image/png" href="assets/images/favicon.png">-->
     <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/responsive.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/search-overlay.css">
     <link rel="stylesheet" href="styles/custom.css">
+    <link rel="stylesheet" href="styles/themes/theme-default.css">
 </head>
-<body ng-cloak>
+<body ng-cloak class="container">
 <nav-header logo="assets/images/logo.png"></nav-header>
-<div class="container" ng-controller="ac_home">
+<div class="main-content" ng-controller="ac_home">
     <div class="row">
-        <div class="one-half column" style="margin-top: 25%">
-            <h4>{{Content}}</h4>
+        <div class="eight columns" style="height: 100vh;border:1px solid #ccc;">
 
-            <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add
-                some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton
-                    documentation</a>.</p>
+        </div>
+        <div class="four columns rsx-hide" style="height: 100vh;border:1px solid #ccc;">
+            <div class="site-fixed-sidebar"></div>
         </div>
     </div>
 </div>
-<!--<div ng-include="'app/views/templates/search-overlay.html'"></div>-->
-<div id="searchOverlay" class="morphsearch">
-    <form class="morphsearch-form">
-        <input class="morphsearch-input" type="search" placeholder="Search..."/>
-        <i class="morphsearch-submit fa fa-search"></i>
-    </form>
-    <div class="morphsearch-content">
-        <div class="dummy-column">
-            <h2>Top searches</h2>
-            <a class="dummy-media-object" href="http://twitter.com/SaraSoueidan">
-                <span class="fa-stack fa-1x">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <strong class="fa-stack-1x text-primary">1</strong>
-                </span>
-                <h3>Mahadeer Mohamed</h3>
-            </a>
-        </div>
-        <div class="dummy-column">
-            <h2>Top read</h2>
-            <a class="dummy-media-object" href="http://twitter.com/SaraSoueidan">
-                <span class="fa-stack fa-1x">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <strong class="fa-stack-1x text-primary">25</strong>
-                </span>
-                <h3>A Sample text post by hovering this</h3>
-            </a>
-        </div>
-    </div>
-    <!-- /morphsearch-content -->
-    <span class="morphsearch-close" search-overlay></span>
-</div>
+<div ng-include="'app/views/templates/search-overlay.html'"></div>
 <!-- Scripts Required -->
 <script type="text/javascript" src="library/jquery.min.js"></script>
 <script type="text/javascript" src="library/angular-min.js"></script>

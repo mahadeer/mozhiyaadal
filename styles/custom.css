@@ -11,16 +11,24 @@ html {
 body {
     font-size: 1.6rem;
     font-family: "PT Sans", sans-serif;
-    color: #33414a;
 }
 
 a {
-    color: #7e4d7e;
     text-decoration: none;
 }
 
-li.site-main-nav-search a{
- margin-left: -25px;
+.main-content {
+    top: 60px;
+}
+
+@media only screen and (max-width: 992px) {
+    .main-content {
+        top: 50px;
+    }
+}
+
+li.site-main-nav-search a {
+    margin-left: -25px;
 }
 
 li.site-main-nav-login a {

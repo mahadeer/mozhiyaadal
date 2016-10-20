@@ -1,0 +1,116 @@
+/* Theme default styles and colors */
+
+body {
+    color: #33414a;
+}
+
+a {
+    color: #7e4d7e;
+}
+
+/* Base CSS */
+.site-nav-bar-fixed {
+    background-color: #33414a;
+}
+
+.site-main-nav {
+    background: transparent;
+}
+
+.site-main-nav a {
+    border-bottom: 1px solid #33414a;
+    color: #ffffff;
+}
+
+.rsx-site-main-nav li a i {
+    color: white;
+}
+
+.rsx-site-nav-content {
+    background: #273640;
+}
+
+ul.rsx-site-menu li {
+    border-bottom: 1px solid #33414a;
+}
+
+ul.rsx-site-menu li a {
+    color: white;
+}
+
+/* search-overlay CSS*/
+.morphsearch {
+    background: #f1f1f1;
+}
+
+input.morphsearch-input {
+    background: transparent;
+    color: #ec5a62;
+}
+
+.morphsearch.hideInput input.morphsearch-input {
+    color: transparent;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+/* placeholder */
+input.morphsearch-input::-webkit-input-placeholder {
+    color: #c2c2c2;
+}
+
+input.morphsearch-input:-moz-placeholder {
+    color: #c2c2c2;
+}
+
+input.morphsearch-input::-moz-placeholder {
+    color: #c2c2c2;
+}
+
+input.morphsearch-input:-ms-input-placeholder {
+    color: #c2c2c2;
+}
+
+/* hide placeholder when active in Chrome */
+.gn-search:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+i.morphsearch-submit {
+    color: #c2c2c2;
+}
+
+.morphsearch-content {
+    color: #333;
+    background: #f1f1f1;
+}
+
+.dummy-column h2 {
+    color: #c2c2c2;
+}
+
+.dummy-media-object {
+    background: rgba(118,117,128,0.05);
+}
+
+.dummy-media-object:hover,
+.dummy-media-object:focus {
+    background: rgba(118,117,128,0.1);
+}
+
+.dummy-media-object h3 {
+    color: rgba(145,145,145,0.7);
+}
+
+.dummy-media-object:hover h3 {
+    color: rgba(236,90,98,1);
+}
+
+strong.text-primary {
+    color: #fff;
+}
+
+/* Overlay */
+.overlay {
+    background: rgba(0,0,0,0.5);
+}
