@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="library/googlefonts.css" rel="stylesheet" type="text/css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+    <link href="library/font-awesome.min.css" rel="stylesheet"
           type="text/css">
     <link rel="stylesheet" href="library/skeleton/normalize.css">
     <link rel="stylesheet" href="library/skeleton/skeleton.css">
@@ -17,16 +17,19 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/search-overlay.css">
     <link rel="stylesheet" href="styles/custom.css">
+    <link rel="stylesheet" href="styles/article.css">
     <link rel="stylesheet" href="styles/themes/theme-default.css">
 </head>
 <body ng-cloak class="container">
 <nav-header logo="assets/images/logo.png"></nav-header>
 <div class="main-content" ng-controller="ac_home">
     <div class="row">
-        <div class="eight columns" style="height: 100vh;border:1px solid #ccc;">
-
+        <div class="columns" ng-class="{'eight' : $root.device == 'desktop', 'twelve': $root.device != 'desktop'}">
+            <div class="articles">
+                <md-article ref="article" ng-repeat="article in articles"></md-article>
+            </div>
         </div>
-        <div class="four columns rsx-hide" style="height: 100vh;border:1px solid #ccc;">
+        <div class="four columns" ng-if="$root.device == 'desktop'">
             <div class="site-fixed-sidebar"></div>
         </div>
     </div>
@@ -40,5 +43,6 @@
 <!-- Angular scripts -->
 <script type="text/javascript" src="app/app.js"></script>
 <script type="text/javascript" src="app/directives/directives.js"></script>
+<script type="text/javascript" src="app/directives/article.js"></script>
 </body>
 </html>

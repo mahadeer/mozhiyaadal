@@ -2,6 +2,7 @@
 
 body {
     color: #33414a;
+    background-color: #fafafa!important;
 }
 
 a {
@@ -113,4 +114,43 @@ strong.text-primary {
 /* Overlay */
 .overlay {
     background: rgba(0,0,0,0.5);
+}
+
+/* Articles */
+.articles .articleItem {
+    color: rgba(0, 0, 0, .8);
+}
+
+.articleItem .articleItem-card {
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,.04);
+    border: 1px solid rgba(0,0,0,.09);
+}
+
+.md-article .md-article-anchor {
+    color: rgba(0,0,0,0.8);
+}
+
+.md-article .md-article-anchor :hover {
+    color: rgba(0,0,0,0.9);
+}
+
+span.md-article-labels {
+    color: #777;
+}
+
+.md-article .md-article-readmore a {
+    color: #777;
+}
+
+.md-article .md-article-readmore a:hover {
+    color: #333;
+}
+
+.md-article-stats span {
+    color: #222;
+}
+
+.md-article-stats span i {
+    color: #02b875;
 }

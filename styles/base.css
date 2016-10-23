@@ -81,7 +81,7 @@
     z-index: 1;
     top: 0;
     right: 0;
-    overflow: auto;
+    overflow: hidden;
     -webkit-transition: visibility 0s 0.3s;
     -moz-transition: visibility 0s 0.3s;
     transition: visibility 0s 0.3s;

@@ -17,13 +17,18 @@ a {
     text-decoration: none;
 }
 
+.container {
+    max-width: 85vw!important;
+    width:100%!important;
+}
+
 .main-content {
-    top: 60px;
+    position: relative;
 }
 
 @media only screen and (max-width: 992px) {
-    .main-content {
-        top: 50px;
+    .container {
+        max-width: 90vw!important;
     }
 }
 
@@ -33,4 +38,17 @@ li.site-main-nav-search a {
 
 li.site-main-nav-login a {
     margin-left: -15px;
+}
+
+/* General Utils */
+.padding-top-10 {
+    padding-top:10px;
+}
+
+.fl-left {
+    float: left!important;
+}
+
+.fl-right {
+    float: right!important;
 }
