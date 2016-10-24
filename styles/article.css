@@ -71,8 +71,9 @@
 }
 
 .md-article-anchor .md-article-img-responsive img {
-    width: auto;
+    width: 100%;
     height: 185px;
+    object-fit: cover;
 }
 
 figure.md-section-figure {

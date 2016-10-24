@@ -131,7 +131,7 @@ strong.text-primary {
     color: rgba(0,0,0,0.8);
 }
 
-.md-article .md-article-anchor :hover {
+.md-article a.md-article-anchor:hover {
     color: rgba(0,0,0,0.9);
 }
 
