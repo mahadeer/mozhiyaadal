@@ -2,7 +2,7 @@
     <div class="md-catalog">
         <div class="md-catalog-header">
             <a href="" class="md-sidebar-anchor">
-                <div class="md-catalog-name">Editor's Pick</div>
+                <div class="md-catalog-name">அதிகம் படித்தவை</div>
                 <div class="md-catalog-description">Choose your posts today.</div>
             </a>
         </div>
@@ -20,16 +20,58 @@
         </ul>
     </div>
 
-    <div class="our-newsletter">
-
-        <h2><i class="fa fa-envelope"></i> Our newsletter</h2>
-
-        <form>
-            <p>Subscribe to our awesome newsletter!</p>
+    <div class="md-catalog">
+        <div class="md-catalog-header">
+            <a href="" class="md-sidebar-anchor">
+                <div class="md-catalog-name">தொகுப்புகள்</div>
+                <div class="md-catalog-description">Choose your categories today.</div>
+            </a>
+        </div>
+        <ul class="md-catalog-items">
+            <li class="md-catalog-item" ng-repeat="label in labels">
+                <div class="md-compact-post">
+                    <div class="md-compact-post-title">
+                        <a href="" class="md-sidebar-labels md-sidebar-anchor" ng-bind="label"></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="md-catalog">
+        <div class="md-catalog-header">
+            <a href="" class="md-sidebar-anchor">
+                <div class="md-catalog-name"><i class="fa fa-envelope"></i> எங்கள் பதிவுகள் பெற</div>
+            </a>
+        </div>
+        <div class="md-catalog-form">
+            <p>{{$root.Title}} பதிவுகளை மின்னஞ்சலில் பெற</p>
             <input type="email" name="email" placeholder="email@example.com"/>
-            <button>Subscribe</button>
-        </form>
-
+            <button class="button-primary">
+                <i class="fa fa-envelope-o"></i>
+            </button>
+        </div>
+    </div>
+    <div class="md-catalog">
+        <div class="md-catalog-header">
+            <a href="" class="md-sidebar-anchor">
+            </a>
+        </div>
+        <ul class="md-catalog-items  md-catalog-footer">
+            <li class="md-catalog-item">
+                <div class="md-compact-post">
+                    <div class="md-compact-post-labels">
+                        <a href="" class="md-sidebar-labels md-sidebar-anchor">Help</a>
+                    </div>
+                </div>
+            </li>
+            <li class="md-catalog-item">
+                <div class="md-compact-post">
+                    <div class="md-compact-post-labels">
+                        <a href="" class="md-sidebar-labels md-sidebar-anchor">About</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 
 </aside>

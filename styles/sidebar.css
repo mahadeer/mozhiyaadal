@@ -35,6 +35,10 @@
     list-style: none;
 }
 
+.md-catalog-form {
+    margin: 20px;
+}
+
 a.md-sidebar-anchor {
     color: inherit;
 }
@@ -58,6 +62,10 @@ a.md-sidebar-anchor:hover {
     max-width: 20vw;
 }
 
+a.md-sidebar-labels:hover {
+    text-decoration: underline;
+}
+
 .md-compact-post-labels {
     color: rgba(0,0,0,.44);
     padding-top: 1px;
@@ -65,4 +73,14 @@ a.md-sidebar-anchor:hover {
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 20vw;
+}
+
+.md-catalog-items.md-catalog-footer {
+    margin-left: 20px;
+}
+
+.md-catalog-items.md-catalog-footer li.md-catalog-item {
+    list-style: none;
+    display: inline-block;
+    margin: 20px 5px;
 }

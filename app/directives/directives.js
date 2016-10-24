@@ -35,6 +35,38 @@ am_mozhiyaadal.directive('searchOverlay', function () {
                 $('.rsx-site-nav-trigger').removeClass('rsx-active');
                 $('.rsx-site-nav').removeClass('rsx-active');
             });
+        },
+        controller: function($scope) {
+            $scope.topSearches = [
+                {
+                    term: "மார்க்ஸ்",
+                    count: 23
+                },
+                {
+                    term: "தமிழ் சினிமா",
+                    count: 17
+                },
+                {
+                    term: "பாலியல் அரசியல் ",
+                    count: 7
+                }
+            ];
+            $scope.reads = [];
+            $scope.commented = [];
+            $.getJSON("assets/mock-articles/articles.json", function(data){
+                $scope.reads = data.map(function(d){
+                    return {
+                        title: d.title,
+                        count: d.read
+                    }
+                });
+                $scope.commented = data.map(function(d){
+                    return {
+                        title: d.title,
+                        count: d.comments
+                    }
+                });
+            });
         }
     }
 });

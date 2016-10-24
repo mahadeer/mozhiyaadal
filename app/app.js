@@ -31,5 +31,19 @@ am_mozhiyaadal.controller('ac_home', ['$scope', function($scope){
                 labels: d.labels
             }
         });
-    })
+        $scope.labels = [];
+        var labels = {};
+        data.forEach(function(d){
+            d.labels.split(',').forEach(function(label){
+                if(labels[label] == undefined) {
+                    labels[label] = 1;
+                } else {
+                    labels[label] = labels[label] + 1;
+                }
+            });
+        });
+        for(var key in labels) {
+           $scope.labels.push(key + " (" + labels[key] + ")");
+        }
+    });
 }]);
