@@ -7,13 +7,13 @@
             </a>
         </div>
         <ul class="md-catalog-items">
-            <li class="md-catalog-item" ng-repeat="post in latestPosts">
+            <li class="md-catalog-item" ng-repeat="post in latestPosts | orderBy: '-read'">
                 <div class="md-compact-post">
                     <div class="md-compact-post-title">
-                        <a href="" class="md-sidebar-anchor">{{post.title}}</a>
+                        <a href="" class="md-sidebar-anchor" ng-bind="post.title"></a>
                     </div>
                     <div class="md-compact-post-labels">
-                        <a href="" class="md-sidebar-anchor">{{post.labels}}</a>
+                        <a href="" class="md-sidebar-anchor" ng-bind="post.labels"></a>
                     </div>
                 </div>
             </li>
@@ -60,14 +60,22 @@
             <li class="md-catalog-item">
                 <div class="md-compact-post">
                     <div class="md-compact-post-labels">
-                        <a href="" class="md-sidebar-labels md-sidebar-anchor">Help</a>
+                        <a href="" class="md-sidebar-labels md-sidebar-anchor">உதவி </a>
                     </div>
                 </div>
             </li>
             <li class="md-catalog-item">
                 <div class="md-compact-post">
                     <div class="md-compact-post-labels">
-                        <a href="" class="md-sidebar-labels md-sidebar-anchor">About</a>
+                        <a href="" class="md-sidebar-labels md-sidebar-anchor">
+                            எங்களை பற்றி</a>
+                    </div>
+                </div>
+            </li>
+            <li class="md-catalog-item">
+                <div class="md-compact-post">
+                    <div class="md-compact-post-labels">
+                        <a href="" class="md-sidebar-labels md-sidebar-anchor">தொடர்ப்பு </a>
                     </div>
                 </div>
             </li>

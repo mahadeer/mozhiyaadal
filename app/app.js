@@ -28,7 +28,8 @@ am_mozhiyaadal.controller('ac_home', ['$scope', function($scope){
         $scope.latestPosts = data.map(function(d){
             return {
                 title: d.title,
-                labels: d.labels
+                labels: d.labels,
+                read: d.read
             }
         });
         $scope.labels = [];
