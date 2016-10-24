@@ -28,6 +28,9 @@ am_mozhiyaadal.directive('searchOverlay', function () {
                 $('.morphsearch').toggleClass('open');
                 if ($('.morphsearch').hasClass('open')) {
                    $('.morphsearch-input').focus();
+                    $('body').css('overflow', 'hidden');
+                } else {
+                    $('body').css('overflow', 'visible');
                 }
                 $('.rsx-site-nav-trigger').removeClass('rsx-active');
                 $('.rsx-site-nav').removeClass('rsx-active');

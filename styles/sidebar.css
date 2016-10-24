@@ -1,0 +1,68 @@
+.site-sidebar-fixed {
+    background-color: transparent;
+    margin-top: 60px;
+}
+
+.site-sidebar-fixed .md-catalog {
+    padding-top: 10px;
+    margin-bottom: 40px;
+}
+
+.md-catalog-header {
+    margin: 0 30px 0 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(0,0,0,.0785);
+}
+
+.md-catalog-name {
+    color: rgba(0,0,0,.44);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0;
+    font-style: normal;
+}
+
+.md-catalog-description {
+    color: rgba(0,0,0,.8);
+    padding-top: 2px;
+    font-size: 14px;
+}
+
+.md-catalog-items li.md-catalog-item {
+    margin: 20px;
+    list-style: none;
+}
+
+a.md-sidebar-anchor {
+    color: inherit;
+}
+
+a.md-sidebar-anchor:hover {
+    color: rgba(0,0,0,0.9);
+}
+
+.md-compact-post {
+    display: table-cell;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.md-compact-post-title {
+    color: rgba(0,0,0,.8);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 20vw;
+}
+
+.md-compact-post-labels {
+    color: rgba(0,0,0,.44);
+    padding-top: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 20vw;
+}

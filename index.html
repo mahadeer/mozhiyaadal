@@ -15,6 +15,7 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="styles/responsive.css">
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
     <link rel="stylesheet" href="styles/search-overlay.css">
     <link rel="stylesheet" href="styles/custom.css">
     <link rel="stylesheet" href="styles/article.css">
@@ -30,7 +31,7 @@
             </div>
         </div>
         <div class="four columns" ng-if="$root.device == 'desktop'">
-            <div class="site-fixed-sidebar"></div>
+            <div ng-include="'app/views/templates/sidebar.html'"></div>
         </div>
     </div>
 </div>

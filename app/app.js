@@ -25,5 +25,11 @@ am_mozhiyaadal.controller('ac_home', ['$scope', function($scope){
     /* Get json from files */
     $.getJSON("assets/mock-articles/articles.json", function(data){
         $scope.articles = data;
+        $scope.latestPosts = data.map(function(d){
+            return {
+                title: d.title,
+                labels: d.labels
+            }
+        });
     })
 }]);

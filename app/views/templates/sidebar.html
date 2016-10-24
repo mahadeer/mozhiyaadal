@@ -1,0 +1,35 @@
+<aside class="site-sidebar-fixed">
+    <div class="md-catalog">
+        <div class="md-catalog-header">
+            <a href="" class="md-sidebar-anchor">
+                <div class="md-catalog-name">Editor's Pick</div>
+                <div class="md-catalog-description">Choose your posts today.</div>
+            </a>
+        </div>
+        <ul class="md-catalog-items">
+            <li class="md-catalog-item" ng-repeat="post in latestPosts">
+                <div class="md-compact-post">
+                    <div class="md-compact-post-title">
+                        <a href="" class="md-sidebar-anchor">{{post.title}}</a>
+                    </div>
+                    <div class="md-compact-post-labels">
+                        <a href="" class="md-sidebar-anchor">{{post.labels}}</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="our-newsletter">
+
+        <h2><i class="fa fa-envelope"></i> Our newsletter</h2>
+
+        <form>
+            <p>Subscribe to our awesome newsletter!</p>
+            <input type="email" name="email" placeholder="email@example.com"/>
+            <button>Subscribe</button>
+        </form>
+
+    </div>
+
+</aside>

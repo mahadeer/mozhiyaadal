@@ -5,6 +5,7 @@
     top: 0px;
     right: 0px;
     position: fixed;
+    overflow: auto;
     z-index: 10000;
 }
 
