@@ -8,14 +8,14 @@
                     </span>
                 </div>
                 <div class="md-article-column">
-                    <a href="" class="md-article-anchor">
+                    <a ng-href="#/article/{{article.id}}" class="md-article-anchor">
                         <div class="md-article-content">
                             <section class="md-article-section">
                                 <div class="md-article-section-content">
                                     <div class="md-article-section-inner">
                                         <figure class="md-section-figure">
                                             <div class="md-article-img-responsive">
-                                                <img src="{{article.cover}}" alt="{{article.title}}">
+                                                <img ng-src="{{article.cover}}" alt="{{article.title}}">
                                             </div>
                                         </figure>
                                         <h3 class="md-article-section-title">
@@ -31,7 +31,7 @@
                     </a>
                 </div>
                 <div class="md-article-readmore">
-                    <a href="" class="md-readmore">மெலும் படிக்க...</a>
+                    <a ng-href="#/article/{{article.id}}" class="md-readmore">மெலும் படிக்க...</a>
                 </div>
                 <div class="padding-top-10">
                     <div class="md-buttonset">

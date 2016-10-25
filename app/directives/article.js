@@ -5,7 +5,7 @@ am_mozhiyaadal.directive('mdArticle', [function(){
         scope: {
             article: "=ref"
         },
-        templateUrl: "app/views/templates/article.html",
+        templateUrl: "app/partials/article-card.html",
         link: function($scope, $element) {
         }
     }

@@ -1,6 +1,6 @@
 [
   {
-    "article_id":"c0462a2a-8ba7-4e92-b7f3-c6d884cdf011",
+    "id":"c0462a2a-8ba7-4e92-b7f3-c6d884cdf011",
     "title": "மேதினம் – அடையாளங்கள் எனும் அமுக்குப்பிசாசு",
     "labels": "மார்க்ஸ்",
     "cover": "assets/sample-images/article_01_01.jpg",
@@ -11,7 +11,7 @@
     "read": 14
   },
   {
-    "article_id":"2dc855e4-5add-4e9b-8a06-ff98b6419a27",
+    "id":"2dc855e4-5add-4e9b-8a06-ff98b6419a27",
     "title": "ரோஹித் தற்கொலையும் இடதுவாத நர்சரிகளும்",
     "labels": " இந்துத்துவா, உடலரசியல், பாசிசம், பொலிட்டிக்கல்",
     "cover": "assets/sample-images/article_02_01.jpg",
@@ -22,7 +22,7 @@
     "read": 26
   },
   {
-    "article_id":"12a79268-90c9-4999-afbd-e87cba57dd10",
+    "id":"12a79268-90c9-4999-afbd-e87cba57dd10",
     "title": "அகம் உருக்குலைந்து பொருக்காடிவிட்ட சமூகத்தின் கதை ‘இறைவி’ | திரைப்பட விமர்சனம்",
     "labels": "இந்திய சினிமா, சினிமா, தமிழ் சினிமா, பிற, மாற்று‍ சினிமா",
     "cover": "assets/sample-images/article_03_01.jpg",
@@ -33,7 +33,7 @@
     "read": 36
   },
   {
-    "article_id":"c333aa6e-44e1-48b0-9757-5c36de406236",
+    "id":"c333aa6e-44e1-48b0-9757-5c36de406236",
     "title": "கோபோ அபேயின் “மணற் குன்றுகளில் பெண்”: ஜப்பானிய நாவல் மற்றும் திரைப்படம்",
     "labels": "சினிமா, மாற்று‍ சினிமா",
     "cover": "assets/sample-images/article_04_01.jpg",
@@ -44,7 +44,7 @@
     "read": 7
   },
   {
-    "article_id":"af0a1507-8534-4bdf-807d-d5260e9baf13",
+    "id":"af0a1507-8534-4bdf-807d-d5260e9baf13",
     "title": "பாலியல் வன்கொடுமையும் மதவாத பர்தாக்களும்",
     "labels": "காமம், பாலியல் அரசியல், வன்கொடுமை",
     "cover": "assets/sample-images/article_05_01.jpg",

@@ -6,7 +6,7 @@ am_mozhiyaadal.directive('navHeader', function () {
         scope: {
             logo: '@'
         },
-        templateUrl: 'app/views/templates/header.html',
+        templateUrl: 'app/partials/header.html',
         link: function (scope, element, attrs) {
             $(element).find('.rsx-site-nav-trigger').click(function (event) {
                 $(this).toggleClass('rsx-active');

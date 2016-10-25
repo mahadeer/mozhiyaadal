@@ -23,27 +23,21 @@
 </head>
 <body ng-cloak class="container">
 <nav-header logo="assets/images/logo.png"></nav-header>
-<div class="main-content" ng-controller="ac_home">
-    <div class="row">
-        <div class="columns" ng-class="{'eight' : $root.device == 'desktop', 'twelve': $root.device != 'desktop'}">
-            <div class="articles">
-                <md-article ref="article" ng-repeat="article in articles"></md-article>
-            </div>
-        </div>
-        <div class="four columns" ng-if="$root.device == 'desktop'">
-            <div ng-include="'app/views/templates/sidebar.html'"></div>
-        </div>
-    </div>
+<div class="main-content" ng-view>
 </div>
-<div ng-include="'app/views/templates/search-overlay.html'"></div>
+<div ng-include="'app/partials/search-overlay.html'"></div>
 <!-- Scripts Required -->
 <script type="text/javascript" src="library/jquery.min.js"></script>
-<script type="text/javascript" src="library/angular-min.js"></script>
+<script type="text/javascript" src="library/angular/angular-min.js"></script>
+<script type="text/javascript" src="library/angular/angular-route.min.js"></script>
 <!-- Custom scripts -->
 <script type="text/javascript" src="scripts/custom.js"></script>
 <!-- Angular scripts -->
 <script type="text/javascript" src="app/app.js"></script>
 <script type="text/javascript" src="app/directives/directives.js"></script>
 <script type="text/javascript" src="app/directives/article.js"></script>
+<!-- Controllers -->
+<script type="text/javascript" src="app/components/home/home.js"></script>
+<script type="text/javascript" src="app/components/article/article.js"></script>
 </body>
 </html>
