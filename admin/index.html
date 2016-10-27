@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="am_mozhiyaadalAdmin">
+<head>
+    <meta charset="utf-8">
+    <title ng-bind="$root.Title"></title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../library/googlefonts.css" rel="stylesheet" type="text/css">
+    <link href="../assets/fonts/Pavanam.css" rel="stylesheet" type="text/css">
+    <link href="../library/font-awesome.min.css" rel="stylesheet"
+          type="text/css">
+    <link rel="stylesheet" href="../library/skeleton/normalize.css">
+    <link rel="stylesheet" href="../library/skeleton/skeleton.css">
+    <!--<link rel="icon" type="image/png" href="assets/images/favicon.png">-->
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/custom.css">
+    <link rel="stylesheet" href="styles/layout.css">
+</head>
+<body ng-cloak>
+<div ng-include="'app/partials/header.html'"></div>
+
+<main class="md-main-content">
+    <div ng-include="'app/partials/sidebar.html'"></div>
+    <div class="content-wrapper" ng-view>
+    </div> <!-- .content-wrapper -->
+</main>
+
+<!-- Scripts Required -->
+<script type="text/javascript" src="../library/jquery.min.js"></script>
+<script type="text/javascript" src="../library/angular/angular-min.js"></script>
+<script type="text/javascript" src="../library/angular/angular-route.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.menu-aim.js"></script>
+<script type="text/javascript" src="scripts/custom.js"></script>
+<!-- Angular scripts -->
+<script type="text/javascript" src="app/app.js"></script>
+<script type="text/javascript" src="app/directives/layout.js"></script>
+
+</body>
+</html>
