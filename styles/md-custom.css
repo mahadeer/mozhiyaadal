@@ -1,0 +1,11 @@
+input.md-control,
+select.md-control {
+    border: none !important;
+    border-bottom: 1px solid #ccc !important;
+    border-radius: 0 !important;
+}
+
+.md-control:focus,
+.md-control:hover {
+    border-bottom: 2px solid #aaa !important;
+}

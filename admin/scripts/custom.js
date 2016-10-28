@@ -115,6 +115,6 @@ $(document).ready(function () {
             }
             scrolling = false;
         }
-
+        $('.tip').tipr();
     }, 1000);
 });

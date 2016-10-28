@@ -25,6 +25,10 @@ am_mozhiyaadalAdmin.config(['$routeProvider',function($routeProvider) {
             templateUrl : 'app/components/home/home.html',
             controller: 'Sample'
         })
+        .when('/post/:id', {
+            templateUrl: 'app/components/post/post.html',
+            controller: 'ac_postController'
+        })
         .otherwise({redirectTo:'/'});
 }]);
 
