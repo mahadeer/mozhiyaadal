@@ -52,3 +52,8 @@ li.site-main-nav-login a {
 .fl-right {
     float: right!important;
 }
+
+.text-muted {
+    color: rgba(0,0,0,0.7);
+    font-family: "Helvetica Neue", "Droid Sans", Helvetica, Arial, sans-serif;
+}

@@ -1,9 +1,32 @@
-<main role="main">
-    <article>
-        <header></header>
-        <div class="md-article-view">
-            <section></section>
+<link rel="stylesheet" href="styles/article.css">
+<main role="main" class="article-main">
+    <div class="loader" ng-if="loader"></div>
+    <div ng-if="!loader">
+        <article class="article-container">
+            <header style="text-align:center">
+                <h1>{{article.title}}</h1>
+
+                <h3 class="text-muted" ng-bind="article.labels.join(',')"></h3>
+            </header>
+            <figure ng-if="article.cover != ''" class="article-image">
+                <img ng-src="{{article.cover}}" alt="{{article.title}}">
+            </figure>
+            <div class="md-article-view">
+                <div ng-bind-html="article.content | trust"></div>
+            </div>
+            <footer></footer>
+        </article>
+        <div class="pg-metaBar">
+            <div class="pg-bar-left">
+                தொகுப்பு: <i> {{article.category}} </i>
+                {{article.likes}} <i class="fa fa-heart-o"></i>
+                {{article.comments}} <i class="fa fa-comments-o"> </i>
+            </div>
+            <div ng-if="isNext" class="pg-bar-right">
+                அடுத்து: <i style="color:green"> {{next.title}} </i>
+                <a class="nextPost" ng-href="#/article/{{next.uri}}"> Next Post </a>
+                <!-- href="/article/{{article.nextPost}}" -->
+            </div>
         </div>
-        <footer></footer>
-    </article>
+    </div>
 </main>

@@ -7,13 +7,13 @@
             </a>
         </div>
         <ul class="md-catalog-items">
-            <li class="md-catalog-item" ng-repeat="post in latestPosts | orderBy: '-read'">
+            <li class="md-catalog-item" ng-repeat="post in recentPosts">
                 <div class="md-compact-post">
                     <div class="md-compact-post-title">
-                        <a href="" class="md-sidebar-anchor" ng-bind="post.title"></a>
+                        <a ng-href="#/article/{{post.uri}}" class="md-sidebar-anchor" ng-bind="post.title"></a>
                     </div>
                     <div class="md-compact-post-labels">
-                        <a href="" class="md-sidebar-anchor" ng-bind="post.labels"></a>
+                        <a class="md-sidebar-anchor" ng-bind="post.labels.join(',')"></a>
                     </div>
                 </div>
             </li>
@@ -28,10 +28,11 @@
             </a>
         </div>
         <ul class="md-catalog-items">
-            <li class="md-catalog-item" ng-repeat="label in labels">
+            <li class="md-catalog-item" ng-repeat="label in labels | orderBy: '-count'">
                 <div class="md-compact-post">
                     <div class="md-compact-post-title">
-                        <a href="" class="md-sidebar-labels md-sidebar-anchor" ng-bind="label"></a>
+                        <a ng-href="#/labels/{{label.label}}" class="md-sidebar-labels md-sidebar-anchor"
+                           ng-bind="(label.label) + '(' + (label.count) + ')'"></a>
                     </div>
                 </div>
             </li>

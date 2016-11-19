@@ -38,8 +38,6 @@ am_mozhiyaadalAdmin.directive('alloyEditor', function() {
            ngModel.$render = function(value) {
                nativeEditor.setData(ngModel.$viewValue);
            };
-
-           $elem.css('max-height', 'calc(100vh - ' + ($elem.offset().top + 50) + 'px)');
        }
    }
 });

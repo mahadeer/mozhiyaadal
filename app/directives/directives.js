@@ -20,14 +20,23 @@ am_mozhiyaadal.directive('navHeader', function () {
     }
 });
 
-am_mozhiyaadal.directive('searchOverlay', function () {
+am_mozhiyaadal.directive('searchOverlay', function (SiteInfo, $location) {
     return {
         restrict: 'A',
         link: function (scope, element, attrs) {
             $(element).click(function (event) {
                 $('.morphsearch').toggleClass('open');
                 if ($('.morphsearch').hasClass('open')) {
-                   $('.morphsearch-input').focus();
+                    $('.morphsearch-input').val('');
+                    $('.morphsearch-input').focus();
+                    $('.morphsearch-input').keyup(function (event) {
+                        if (event.keyCode == 13) {
+                            var term = event.target.value;
+                            var url = '/search/' + term;
+                            $location.path(url);
+                            scope.$apply();
+                        }
+                    });
                     $('body').css('overflow', 'hidden');
                 } else {
                     $('body').css('overflow', 'visible');
@@ -36,37 +45,24 @@ am_mozhiyaadal.directive('searchOverlay', function () {
                 $('.rsx-site-nav').removeClass('rsx-active');
             });
         },
-        controller: function($scope) {
-            $scope.topSearches = [
-                {
-                    term: "மார்க்ஸ்",
-                    count: 23
-                },
-                {
-                    term: "தமிழ் சினிமா",
-                    count: 17
-                },
-                {
-                    term: "பாலியல் அரசியல் ",
-                    count: 7
-                }
-            ];
-            $scope.reads = [];
-            $scope.commented = [];
-            $.getJSON("assets/mock-articles/articles.json", function(data){
-                $scope.reads = data.map(function(d){
-                    return {
-                        title: d.title,
-                        count: d.read
-                    }
-                });
-                $scope.commented = data.map(function(d){
-                    return {
-                        title: d.title,
-                        count: d.comments
-                    }
-                });
-            });
+        controller: function ($scope) {
+            $scope.topSearches = SiteInfo.get('searches');
+            $scope.likes = SiteInfo.get('likes');
+            $scope.comments = SiteInfo.get('comments');
+        }
+    }
+});
+
+am_mozhiyaadal.directive('timeSpan', function () {
+    return {
+        restrict: 'A',
+        link: function ($scope, $elem, $attrs) {
+            var posted = $scope.$eval($attrs.timeSpan);
+            var timeAgo = moment(posted).fromNow();
+            if (timeAgo.includes("years") || timeAgo.includes("months")) {
+                timeAgo = moment(posted).format("MMMM Do YYYY");
+            }
+            $elem.html(timeAgo);
         }
     }
 });

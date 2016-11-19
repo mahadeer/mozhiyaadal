@@ -6,27 +6,27 @@
     <div class="morphsearch-content">
         <div class="dummy-column">
             <h2>முதன்மையான தேடல் </h2>
-            <a class="dummy-media-object" ng-repeat="search in topSearches | orderBy: '-count'">
+            <a class="dummy-media-object" ng-href="#/search/{{search.keyword}}" ng-repeat="search in topSearches | orderBy: '-count'">
                 <span class="fa-stack fa-1x">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <strong class="fa-stack-1x text-primary" ng-bind="search.count"></strong>
                 </span>
-                <h3 ng-bind="search.term"></h3>
+                <h3 ng-bind="search.keyword"></h3>
             </a>
         </div>
         <div class="dummy-column">
             <h2>அதிகம் படித்தவை </h2>
-            <a class="dummy-media-object" ng-repeat="read in reads | orderBy: '-count'">
+            <a class="dummy-media-object" ng-href="#/article/{{like.uri}}" ng-repeat="like in likes | orderBy: '-count'">
                 <span class="fa-stack fa-1x">
                     <i class="fa fa-circle fa-stack-2x"></i>
-                    <strong class="fa-stack-1x text-primary" ng-bind="read.count"></strong>
+                    <strong class="fa-stack-1x text-primary" ng-bind="like.count"></strong>
                 </span>
-                <h3 ng-bind="read.title"></h3>
+                <h3 ng-bind="like.title"></h3>
             </a>
         </div>
         <div class="dummy-column">
             <h2>அதிகம் விவாதிக்கப்பட்டவை </h2>
-            <a class="dummy-media-object" ng-repeat="comment in commented | orderBy: '-count'">
+            <a class="dummy-media-object" ng-href="#/article/{{comment.uri}}" ng-repeat="comment in comments | orderBy: '-count'">
                 <span class="fa-stack fa-1x">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <strong class="fa-stack-1x text-primary" ng-bind="comment.count"></strong>

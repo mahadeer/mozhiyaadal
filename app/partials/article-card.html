@@ -3,17 +3,19 @@
         <div class="articleItem-cardInner articleItem-cardInner-preview">
             <div class="md-article md-article-short">
                 <div class="md-marginTopSection">
-                    <span class="md-article-labels">
-                        <i class="fa fa-tag"></i>{{article.labels}}
+                    <span class="md-article-labels pull-left">
+                        <i class="fa fa-tag"></i>{{article.labels.join(',')}}
+                    </span>
+                    <span class="md-article-date pull-right" time-span="article.posted">
                     </span>
                 </div>
                 <div class="md-article-column">
-                    <a ng-href="#/article/{{article.id}}" class="md-article-anchor">
-                        <div class="md-article-content">
+                    <a ng-href="#/article/{{article.uri}}" class="md-article-anchor">
+                        <div class="md-article-content" ng-class="(article.cover == '') ? 'md-article-no-cover' : ''">
                             <section class="md-article-section">
                                 <div class="md-article-section-content">
                                     <div class="md-article-section-inner">
-                                        <figure class="md-section-figure">
+                                        <figure ng-if="article.cover != ''" class="md-section-figure">
                                             <div class="md-article-img-responsive">
                                                 <img ng-src="{{article.cover}}" alt="{{article.title}}">
                                             </div>

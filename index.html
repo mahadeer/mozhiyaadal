@@ -18,7 +18,8 @@
     <link rel="stylesheet" href="styles/sidebar.css">
     <link rel="stylesheet" href="styles/search-overlay.css">
     <link rel="stylesheet" href="styles/custom.css">
-    <link rel="stylesheet" href="styles/article.css">
+    <link rel="stylesheet" href="styles/loader.css">
+    <link rel="stylesheet" href="styles/article-card.css">
     <link rel="stylesheet" href="styles/themes/theme-default.css">
 </head>
 <body ng-cloak class="container">
@@ -30,14 +31,19 @@
 <script type="text/javascript" src="library/jquery.min.js"></script>
 <script type="text/javascript" src="library/angular/angular-min.js"></script>
 <script type="text/javascript" src="library/angular/angular-route.min.js"></script>
+<script type="text/javascript" src="library/moment.min.js"></script>
 <!-- Custom scripts -->
 <script type="text/javascript" src="scripts/custom.js"></script>
 <!-- Angular scripts -->
 <script type="text/javascript" src="app/app.js"></script>
+<script type="text/javascript" src="app/services/engineService.js"></script>
+<script type="text/javascript" src="app/services/articleApiService.js"></script>
+<script type="text/javascript" src="app/services/infoProvider.js"></script>
 <script type="text/javascript" src="app/directives/directives.js"></script>
 <script type="text/javascript" src="app/directives/article.js"></script>
 <!-- Controllers -->
 <script type="text/javascript" src="app/components/home/home.js"></script>
 <script type="text/javascript" src="app/components/article/article.js"></script>
+<script type="text/javascript" src="app/components/list/search.js"></script>
 </body>
 </html>

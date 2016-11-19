@@ -135,7 +135,8 @@ strong.text-primary {
     color: rgba(0,0,0,0.9);
 }
 
-span.md-article-labels {
+span.md-article-labels,
+span.md-article-date {
     color: #777;
 }
 

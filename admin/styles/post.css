@@ -3,6 +3,7 @@
     background: #fff;
     width: 100vw;
     height: 100vh;
+    overflow: auto;
     top: 0;
     left: 0;
     z-index: 2;
@@ -11,7 +12,7 @@
 
 .md-config-panel {
     top: 0;
-    position: fixed;
+    position: absolute;
     width: 100vw;
     left: 0;
     border-bottom: 1px solid #ccc;
@@ -78,7 +79,6 @@ div.md-content {
     outline: none;
     font-size: 24px;
     letter-spacing: 2px;
-    line-height: 12px;
     overflow: auto;
     padding-top: 10px;
     padding-left: 5px;

@@ -1,29 +1,19 @@
-am_mozhiyaadal.controller('ac_home', ['$scope', function($scope){
+am_mozhiyaadal.controller('ac_home', ['$scope', 'ArticleApiService', function($scope, ArticleApiService){
     $scope.Content = 'Basic Page from Controller';
     $scope.articles = [];
-    /* Get json from files */
-    $.getJSON("assets/mock-articles/articles.json", function(data){
-        $scope.articles = data;
-        $scope.latestPosts = data.map(function(d){
-            return {
-                title: d.title,
-                labels: d.labels,
-                read: d.read
-            }
-        });
-        $scope.labels = [];
-        var labels = {};
-        data.forEach(function(d){
-            d.labels.split(',').forEach(function(label){
-                if(labels[label] == undefined) {
-                    labels[label] = 1;
-                } else {
-                    labels[label] = labels[label] + 1;
-                }
-            });
-        });
-        for(var key in labels) {
-            $scope.labels.push(key + " (" + labels[key] + ")");
+    $scope.recentPosts = [];
+    $scope.labels = [];
+    
+    ArticleApiService.GetArticles(0).then(function(res){
+        if(res.status) {
+            $scope.articles = $scope.articles.concat(res.data);
         }
+    });
+
+    ArticleApiService.GetArticlesInfo().then(function(res){
+       if(res.status) {
+           $scope.recentPosts = res.data.recentPosts;
+           $scope.labels = res.data.labels;
+       }
     });
 }]);
