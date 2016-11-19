@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="styles/list.css">
+<main class="list-main">
+    <div class="row">
+        <div class="columns" ng-class="{'eight' : $root.device == 'desktop', 'twelve': $root.device != 'desktop'}">
+            <div class="articles">
+                <h2>{{Msg}}</h2>
+                <md-article ref="item" ng-repeat="item in results"></md-article>
+                <div ng-if="results.length == 0">
+                    <h5 ng-if="!loader">பதிவுகள் ஏதும் இல்லை</h5>
+                    <h5 ng-if="loader">Loading...</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
