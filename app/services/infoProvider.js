@@ -9,7 +9,7 @@ am_mozhiyaadal.factory("SiteInfo", ['AppEngineService', function (AppEngineServi
                     $obj = {
                         'searches': [],
                         'comments': [],
-                        'likes': []
+                        'reads': []
                     }
                 }
             });

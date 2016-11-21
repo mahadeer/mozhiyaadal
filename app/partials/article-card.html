@@ -10,7 +10,7 @@
                     </span>
                 </div>
                 <div class="md-article-column">
-                    <a ng-href="#/article/{{article.uri}}" class="md-article-anchor">
+                    <a ng-href="#!/article/{{article.uri}}" class="md-article-anchor">
                         <div class="md-article-content" ng-class="(article.cover == '') ? 'md-article-no-cover' : ''">
                             <section class="md-article-section">
                                 <div class="md-article-section-content">
@@ -23,6 +23,7 @@
                                         <h3 class="md-article-section-title">
                                             {{article.title}}
                                         </h3>
+
                                         <div class="md-section-section-content">
                                             {{article.short}}
                                         </div>
@@ -33,12 +34,12 @@
                     </a>
                 </div>
                 <div class="md-article-readmore">
-                    <a ng-href="#/article/{{article.id}}" class="md-readmore">மெலும் படிக்க...</a>
+                    <a ng-href="#!/article/{{article.id}}" class="md-readmore">மெலும் படிக்க...</a>
                 </div>
                 <div class="padding-top-10">
                     <div class="md-buttonset">
                         <div class="md-article-stats fl-left">
-                            <span><i class="fa fa-heart-o"></i>{{article.likes}}</span>
+                            <span><i class="fa fa-eye"></i>{{article.reads}}</span>
                             <span><i class="fa fa-comments-o"></i>{{article.comments}}</span>
                         </div>
                         <div class="fl-right">

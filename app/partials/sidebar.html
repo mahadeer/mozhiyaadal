@@ -10,7 +10,7 @@
             <li class="md-catalog-item" ng-repeat="post in recentPosts">
                 <div class="md-compact-post">
                     <div class="md-compact-post-title">
-                        <a ng-href="#/article/{{post.uri}}" class="md-sidebar-anchor" ng-bind="post.title"></a>
+                        <a ng-href="#!/article/{{post.uri}}" class="md-sidebar-anchor" ng-bind="post.title"></a>
                     </div>
                     <div class="md-compact-post-labels">
                         <a class="md-sidebar-anchor" ng-bind="post.labels.join(',')"></a>
@@ -31,7 +31,7 @@
             <li class="md-catalog-item" ng-repeat="label in labels | orderBy: '-count'">
                 <div class="md-compact-post">
                     <div class="md-compact-post-title">
-                        <a ng-href="#/labels/{{label.label}}" class="md-sidebar-labels md-sidebar-anchor"
+                        <a ng-href="#!/labels/{{label.label}}" class="md-sidebar-labels md-sidebar-anchor"
                            ng-bind="(label.label) + '(' + (label.count) + ')'"></a>
                     </div>
                 </div>

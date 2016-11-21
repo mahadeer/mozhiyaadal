@@ -25,11 +25,13 @@ am_mozhiyaadal.directive('searchOverlay', function (SiteInfo, $location) {
         restrict: 'A',
         link: function (scope, element, attrs) {
             $(element).click(function (event) {
-                $('.morphsearch').toggleClass('open');
-                if ($('.morphsearch').hasClass('open')) {
-                    $('.morphsearch-input').val('');
-                    $('.morphsearch-input').focus();
-                    $('.morphsearch-input').keyup(function (event) {
+                var morphSearch = $('.morphsearch');
+                morphSearch.toggleClass('open');
+                if (morphSearch.hasClass('open')) {
+                    var morphSearchInput = $('.morphsearch-input');
+                    morphSearchInput.val('');
+                    morphSearchInput.focus();
+                    morphSearchInput.keyup(function (event) {
                         if (event.keyCode == 13) {
                             var term = event.target.value;
                             var url = '/search/' + term;
@@ -47,7 +49,7 @@ am_mozhiyaadal.directive('searchOverlay', function (SiteInfo, $location) {
         },
         controller: function ($scope) {
             $scope.topSearches = SiteInfo.get('searches');
-            $scope.likes = SiteInfo.get('likes');
+            $scope.reads = SiteInfo.get('reads');
             $scope.comments = SiteInfo.get('comments');
         }
     }

@@ -28,7 +28,8 @@ am_mozhiyaadal.run(['$rootScope', 'SiteInfo' , function($rootScope, SiteInfo){
     });
 }]);
 
-am_mozhiyaadal.config(['$routeProvider',function($routeProvider) {
+am_mozhiyaadal.config(
+    ['$routeProvider', '$locationProvider',function($routeProvider, $locationProvider) {
     $routeProvider
         .when('/', {
             templateUrl : 'app/components/home/home.html',
@@ -47,6 +48,7 @@ am_mozhiyaadal.config(['$routeProvider',function($routeProvider) {
             controller: 'ac_labels'
         })
         .otherwise({redirectTo:'/'});
+        $locationProvider.hashPrefix('!');
 }]);
 
 am_mozhiyaadal.filter("trust", ['$sce', function($sce) {

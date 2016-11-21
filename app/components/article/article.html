@@ -5,7 +5,6 @@
         <article class="article-container">
             <header style="text-align:center">
                 <h1>{{article.title}}</h1>
-
                 <h3 class="text-muted" ng-bind="article.labels.join(',')"></h3>
             </header>
             <figure ng-if="article.cover != ''" class="article-image">
@@ -14,17 +13,33 @@
             <div class="md-article-view">
                 <div ng-bind-html="article.content | trust"></div>
             </div>
-            <footer></footer>
+            <footer>
+                <div id="disqus_thread"></div>
+                <script>
+                    var disqus_config = function () {
+                        this.page.url = window.disqus.url;
+                        this.page.identifier = window.disqus.identifier;
+                    };
+                    (function () {
+                        var d = document, s = d.createElement('script');
+                        s.src = '//mozhithal.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments
+                    powered by Disqus.</a></noscript>
+            </footer>
         </article>
         <div class="pg-metaBar">
             <div class="pg-bar-left">
                 தொகுப்பு: <i> {{article.category}} </i>
-                {{article.likes}} <i class="fa fa-heart-o"></i>
+                {{article.reads}} <i class="fa fa-eye"></i>
                 {{article.comments}} <i class="fa fa-comments-o"> </i>
             </div>
             <div ng-if="isNext" class="pg-bar-right">
                 அடுத்து: <i style="color:green"> {{next.title}} </i>
-                <a class="nextPost" ng-href="#/article/{{next.uri}}"> Next Post </a>
+                <a class="nextPost" ng-href="#!/article/{{next.uri}}"> Next Post </a>
                 <!-- href="/article/{{article.nextPost}}" -->
             </div>
         </div>
