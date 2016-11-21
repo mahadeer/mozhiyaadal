@@ -18,7 +18,7 @@ am_mozhiyaadal.run(['$rootScope', 'SiteInfo' , function($rootScope, SiteInfo){
         $rootScope.$apply();
     });
     /* Define API Services URL */
-    $rootScope.APIUri = "http://localhost:8080";
+    $rootScope.APIUri = "https://mozhithal-mock-db-mahadeer13.c9users.io";
 
     SiteInfo.refresh();
 
